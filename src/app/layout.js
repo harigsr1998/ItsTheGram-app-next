@@ -1,16 +1,11 @@
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/sidebar/Sidebar";
+import Advertisement from "@/components/advertisement/Advertisement";
+import { UserProvider } from "@/context/UserContext";
+import TitleHeader from "@/components/Title/TitleHeader";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -20,10 +15,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={inter.className}>
+        <UserProvider>
+          <div className="flex h-screen flex-col-reverse justify-between gap-1 bg-gray-200 p-1 sm:flex-row sm:gap-2 sm:p-2">
+            <div className="flex flex-col xl:max-w-[240px] xl:flex-[2] 2xl:max-w-[300px]">
+              <Sidebar />
+            </div>
+            <div className="min-h-[calc(100svh-104px)] overflow-y-auto sm:h-[calc(100vh-16px)] sm:flex-1 xl:max-w-[560px] xl:flex-[4] 2xl:max-w-[675px]">
+              {children}
+            </div>
+            <div className="sm:hidden xl:block xl:max-w-[400px] xl:flex-[3] 2xl:max-w-[506px]">
+              <Advertisement />
+              <TitleHeader />
+            </div>
+          </div>
+        </UserProvider>
       </body>
     </html>
   );
