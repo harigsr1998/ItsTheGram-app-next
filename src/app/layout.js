@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <UserProvider>
+          {/* <TitleHeader /> */}
           <div className="flex h-screen flex-col-reverse justify-between gap-1 bg-gray-200 p-1 sm:flex-row sm:gap-2 sm:p-2">
             <div className="flex flex-col xl:max-w-[240px] xl:flex-[2] 2xl:max-w-[300px]">
               <Sidebar />
@@ -24,9 +25,9 @@ export default function RootLayout({ children }) {
             <div className="min-h-[calc(100svh-104px)] overflow-y-auto sm:h-[calc(100vh-16px)] sm:flex-1 xl:max-w-[560px] xl:flex-[4] 2xl:max-w-[675px]">
               {children}
             </div>
-            <div className="sm:hidden xl:block xl:max-w-[400px] xl:flex-[3] 2xl:max-w-[506px]">
+            <div className="hidden xl:block xl:max-w-[400px] xl:flex-[3] 2xl:max-w-[506px]">
               <Advertisement />
-              <TitleHeader />
+              {/* <TitleHeader /> */}
             </div>
           </div>
         </UserProvider>

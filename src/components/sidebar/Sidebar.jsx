@@ -83,20 +83,19 @@ const Sidebar = () => {
           {navLinks.map((navLink) => (
             <Link
               href={navLink.href}
-              className={`flex justify-start gap-2 rounded-lg p-1 px-4 align-middle transition-all duration-200 hover:scale-105 hover:bg-gray-200 sm:p-4 sm:px-0 xl:px-8 xl:py-2 2xl:px-10 2xl:py-3 [&:nth-child(4)]:hidden sm:[&:nth-child(4)]:inline-flex ${
+              className={`flex justify-start gap-2 rounded-lg p-1 px-4 align-middle transition-all duration-200 hover:scale-105 hover:bg-gray-200 sm:justify-center sm:p-4 sm:px-0 xl:justify-start xl:px-8 xl:py-2 2xl:px-10 2xl:py-3 [&:nth-child(4)]:hidden sm:[&:nth-child(4)]:inline-flex ${
                 pathname === navLink.href && "bg-gray-200 font-bold"
               }`}
               key={navLink.title}
             >
               {" "}
-              {/* [&:nth-child(4)]:hidden sm:[&:nth-child(4)]:inline-block */}
-              <span className="[&>*]:inline-block [&>*]:size-9 [&>*]:xl:size-5 [&>*]:2xl:size-7">
+              <span className="xl:inline-flex xl:align-middle [&>*]:inline-block [&>*]:size-9 [&>*]:xl:size-5 [&>*]:2xl:size-7">
                 {/* mx-auto xl:mr-2 [&>*]:xl:-mt-[2px] */}
                 {pathname === navLink.href
                   ? navLink.icons.active
                   : navLink.icons.inactive}
               </span>
-              <span className="hidden xl:flex xl:items-center">
+              <span className="hidden xl:inline-flex xl:align-middle">
                 {/* xl:-mt-1 xl:mr-2 */}
                 {navLink.title}
               </span>
@@ -107,12 +106,14 @@ const Sidebar = () => {
           <UserSelector />
           <Link
             href="/logout"
-            className="flex w-full shrink-0 grow-0 rounded-lg align-middle text-base transition-all duration-200 hover:scale-105 hover:bg-gray-200 sm:p-4 xl:px-8 xl:py-2 2xl:rounded-xl 2xl:px-10 2xl:py-3 2xl:text-2xl"
+            className="flex w-full shrink-0 grow-0 justify-start gap-2 rounded-lg align-middle text-base transition-all duration-200 hover:scale-105 hover:bg-gray-200 sm:p-4 xl:px-8 xl:py-2 2xl:rounded-xl 2xl:px-10 2xl:py-3 2xl:text-2xl"
           >
-            <span className="inline-block sm:mb-1 xl:mr-2">
-              <TbLogout2 className="sm:size-10 xl:size-6 2xl:size-7" />
+            <span className="xl:inline-flex">
+              <TbLogout2 className="self-center sm:size-10 xl:size-6 2xl:size-8" />
             </span>
-            <span className="hidden xl:inline-block">Logout</span>
+            <span className="hidden xl:inline-flex xl:align-middle">
+              Logout
+            </span>
           </Link>
         </div>
       </div>
