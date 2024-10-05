@@ -28,6 +28,7 @@ const IndividualChatPage = async ({ searchParams }) => {
               index1={index1}
               index2={index2}
               randomProfilePictureId={searchParams.randomProfilePictureId}
+              key={[index1, index2]}
             />
           )),
         )}
