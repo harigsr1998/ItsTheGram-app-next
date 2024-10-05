@@ -13,7 +13,7 @@ const IndividualSelector = async ({ dataID, commentID, page, children }) => {
         page !== "storiesbar" && "flex shrink-0 p-1 align-middle 2xl:p-2"
       } ${page === "explore" && "gap-2 rounded-full bg-gray-200 sm:gap-3 xl:gap-2"} ${
         page === "chat" &&
-        "mb-1 w-full justify-between gap-4 bg-white hover:bg-gray-200 sm:mb-4 sm:rounded xl:mb-0"
+        "mb-1 w-full justify-between bg-white hover:bg-gray-200"
       } ${
         page === "storiesbar" &&
         "aspect-square w-12 shrink-0 grow-0 rounded-full bg-green-400 outline outline-2 outline-offset-2 outline-red-500 sm:w-16 sm:outline-4 sm:outline-offset-4 xl:w-12 xl:outline-2 xl:outline-offset-2 2xl:w-16 2xl:outline-4 2xl:outline-offset-4"

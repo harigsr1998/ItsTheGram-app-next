@@ -8,7 +8,7 @@ const IndividualChatPage = async ({ searchParams }) => {
   const data = await getData();
 
   return (
-    <div className="flex h-[calc(100svh-104px)] flex-col gap-1 overflow-hidden bg-white p-1 sm:h-[calc(100vh-16px)] sm:gap-3 sm:rounded-lg sm:p-4 sm:text-lg xl:text-sm 2xl:rounded-xl 2xl:text-lg">
+    <div className="flex h-[calc(100svh-96px)] flex-col gap-1 overflow-hidden bg-white p-1 sm:h-[calc(100svh-60px)] sm:gap-3 sm:rounded-lg sm:p-4 sm:text-lg xl:text-sm 2xl:rounded-xl 2xl:text-lg">
       {/* Header */}
       <div className="flex h-10 shrink-0 grow-0 items-center gap-2 sm:h-14 sm:gap-4 xl:h-10 xl:gap-2 2xl:h-14 2xl:gap-3">
         <BackButton />

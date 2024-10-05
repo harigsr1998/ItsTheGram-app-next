@@ -76,7 +76,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="flex bg-white p-1 text-sm font-semibold sm:h-[calc(100vh-16px)] sm:flex-col sm:rounded-lg sm:p-4 2xl:p-6 2xl:text-xl">
+    <div className="flex bg-white p-1 text-sm font-semibold sm:min-h-[calc(100vh-60px)] sm:flex-col sm:rounded-lg sm:p-4 2xl:p-6 2xl:text-xl">
       <Title page="sidebar" />
       <div className="flex grow sm:flex-col sm:justify-between xl:pt-4 2xl:h-[calc(100vh-128px)]">
         <div className="flex w-full justify-around sm:w-auto sm:flex-col sm:justify-normal sm:gap-6 xl:gap-2 2xl:gap-3">

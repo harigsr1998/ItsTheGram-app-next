@@ -20,8 +20,8 @@ const StoryPage = ({ searchParams }) => {
   }
 
   return (
-    <div className="h-[calc(100svh-104px)] bg-white sm:h-[calc(100vh-16px)] sm:rounded-lg sm:p-4">
-      <div className="noScrollBar flex h-[calc(100svh-152px)] snap-x snap-mandatory overflow-x-scroll sm:h-[calc(100vh-48px)]">
+    <div className="h-[calc(100svh-96px)] bg-white sm:h-[calc(100vh-16px)] sm:rounded-lg sm:p-4">
+      <div className="noScrollBar flex h-[calc(100svh-96px)] snap-x snap-mandatory overflow-x-scroll sm:h-[calc(100svh-48px)]">
         {stories}
       </div>
     </div>

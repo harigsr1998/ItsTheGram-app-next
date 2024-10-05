@@ -11,7 +11,7 @@ const RecentExploreBar = dynamic(
 
 const ExplorePage = () => {
   return (
-    <div className="flex min-h-[calc(100svh-104px)] flex-col bg-white p-1 sm:h-[calc(100vh-16px)] sm:rounded-lg sm:p-4">
+    <div className="flex h-[calc(100svh-96px)] flex-col bg-white p-1 sm:h-[calc(100vh-60px)] sm:rounded-lg sm:p-4">
       <h2 className="shrink-0 grow-0 content-center text-xl font-bold sm:pb-1 sm:text-3xl xl:text-lg 2xl:pb-1 2xl:text-3xl">
         Search
       </h2>
