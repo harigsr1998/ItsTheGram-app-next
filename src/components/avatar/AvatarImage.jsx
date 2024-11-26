@@ -12,7 +12,7 @@ const AvatarImage = ({ user }) => {
       src={`/avatar/${user ? user : userLoggedIN.user}.jpg`}
       height={96}
       width={96}
-      className="w-full h-full object-cover rounded-full"
+      className="h-full w-full rounded-full object-cover"
     />
   );
 };
