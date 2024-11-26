@@ -16,9 +16,7 @@ const SavedIndividual = ({ individualItem }) => {
       }`}
     >
       <Image
-        src={`https://picsum.photos/200/200?random=${Math.floor(
-          Math.random() * 1000,
-        )}`}
+        src={`/random_post_pictures/${Math.floor(Math.random() * 24)}.jpg`}
         width={200}
         height={200}
         className="h-full w-[50%] rounded-md object-cover"
