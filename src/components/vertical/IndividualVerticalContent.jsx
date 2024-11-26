@@ -10,7 +10,7 @@ const IndividualVerticalContent = ({ page, dataParams }) => {
         src={`/random_post_pictures/${imageRandomizer}.jpg`}
         width={608}
         height={932}
-        className={`h-full w-full snap-center object-cover`}
+        className={`h-full snap-center object-cover`}
         key={imageRandomizer}
       />
       <VerticalContentControls page={page} dataParams={dataParams} />
